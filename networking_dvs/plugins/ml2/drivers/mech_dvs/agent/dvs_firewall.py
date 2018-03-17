@@ -24,6 +24,8 @@ from networking_dvs.plugins.ml2.drivers.mech_dvs.agent.vcenter_util import VCent
 LOG = logging.getLogger(__name__)
 CONF = config.CONF
 
+def _uncurry(_, f, *args, **keywords):
+    return f(*args, **keywords)
 
 @trace_cls("driver", hide_args=True, hide_result=True)
 class DvsSecurityGroupsDriver(firewall.FirewallDriver):

@@ -23,6 +23,7 @@ from oslo_log import log
 
 from networking_dvs.api import dvs_agent_rpc_api
 from networking_dvs.common import constants as dvs_constants
+from networking_dvs.utils import dvs_util, security_group_utils as sg_util
 
 LOG = log.getLogger(__name__)
 

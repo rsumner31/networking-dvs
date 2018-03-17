@@ -105,6 +105,9 @@ class DvsNeutronAgent(sg_rpc.SecurityGroupAgentRpcCallbackMixin,
         network_maps = neutron_utils.parse_mappings(self.conf.ML2_VMWARE.network_maps)
         network_maps_v2 = {}
 
+        network_maps = neutron_utils.parse_mappings( self.conf.ML2_VMWARE.network_maps )
+        network_maps_v2 = {}
+
         self.agent_state = {
             'binary': 'neutron-dvs-agent',
             'host': self.conf.host,
